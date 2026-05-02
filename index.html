@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      text-align: center;
+      margin-top: 100px;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 300px;
+      margin: auto;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px;
+    }
+    button {
+      padding: 10px;
+      width: 95%;
+      background: blue;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Login</h2>
+
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+function login() {
+  var user = document.getElementById("username").value;
+  var pass = document.getElementById("password").value;
+
+  if(user == "mohamed Salam" && pass == "05234"){
+    document.getElementById("result").innerHTML =
+    "<h3>📚 Mohamed's Schedule</h3><p>Math - English - Science</p>";
+  }
+
+  else if(user == "Yamen mohamed" && pass == "78787"){
+    document.getElementById("result").innerHTML =
+    "<h3>📚 Yamen's Schedule</h3><p>Arabic - Biology - Chemistry</p>";
+  }
+
+  else{
+    document.getElementById("result").innerHTML = "❌ Wrong data";
+  }
+}
+</script>
+
+</body>
+</html>
